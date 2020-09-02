@@ -32,8 +32,7 @@ automake -a
 
 echo "- doxygen."
 if [ -e doc/doxygen ]; then 
-  rm -rf doc/doxygen/html; 
-  rm -rf doc/doxygen/latex; 
+  rm -rf doc/doxygen/ 
 fi
 doxygen Doxyfile
 

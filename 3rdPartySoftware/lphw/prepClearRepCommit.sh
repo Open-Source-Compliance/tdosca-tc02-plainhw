@@ -16,8 +16,7 @@ do
 done
 
 if [ -e doc/doxygen ]; then 
-  rm -rf doc/doxygen/html; 
-  rm -rf doc/doxygen/latex; 
+  rm -rf doc/doxygen; 
 fi;
 
 find . -type l -exec rm \{\} \;

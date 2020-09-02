@@ -25,19 +25,19 @@
 
 int main (int argn, char * argv[])
 {
-    int lobj_1,
-        lobj_2;
+    int lobj1,
+        lobj2;
 
     printf("starting the lphw-lib test:\n");
 
-    lobj_1=init_lphw_object();
-    lobj_2=init_lphw_object();
+    lobj1=init_lphw_object();
+    lobj2=init_lphw_object();
 
-    hello_lphw_object(lobj_1);
-    hello_lphw_object(lobj_2);
+    hello_lphw_object(lobj1);
+    hello_lphw_object(lobj2);
 
-    delete_lphw_object(lobj_1);
-    delete_lphw_object(lobj_2);
+    delete_lphw_object(lobj1);
+    delete_lphw_object(lobj2);
 
     printf("---------------------------\n");
 

@@ -11,3 +11,9 @@ EXTRA_DIST = lphw.html
 doc:
 	pandoc -o lphw.html ../README.md
 
+clear:
+	rm -rf doxygen
+
+doxygen:
+	( cd .. && doxygen Doxyfile)
+
