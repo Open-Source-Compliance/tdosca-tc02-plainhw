@@ -1,0 +1,40 @@
+#!/bin/sh
+#  
+# file <reconf> version <#1.0.0#> of project <LPHW>
+
+#!/bin/sh
+ACLOCAL_PATH=" -I /usr/local/gnu/share/aclocal   -I /usr/local/share/aclocal   -I /opt/gnome/share/aclocal   -I/usr/share/aclocal"
+
+DELCONF_FILES=`ls config.*`
+DELETE_FILES=" config.cache    acconfig.h    Makefile    Makefile.in    aclocal.m4    configure    ${DELCONF_FILES}"
+for DF in ${DELETE_FILES};
+do
+  echo "deleting ${DF}"
+  find . -name ${DF} -exec rm \{\} \;
+done
+
+find . -type l -exec rm \{\} \;
+
+echo "- aclocal."
+aclocal
+
+echo "- libtoolize"
+libtoolize
+
+echo "- autoconf."
+autoconf
+
+echo "- autoheader."
+autoheader
+
+echo "- automake."
+automake -a
+
+echo "- doxygen."
+if [ -e doc/doxygen ]; then 
+  rm -rf doc/doxygen/html; 
+  rm -rf doc/doxygen/latex; 
+fi
+doxygen Doxyfile
+
+exit

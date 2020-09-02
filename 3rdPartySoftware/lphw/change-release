@@ -1,0 +1,108 @@
+#!/bin/bash
+
+#-------------------------------------------------------------------------------
+#  define the mimetypes which shall be reviewed
+CFP="\*.html \*.txt \*.cpp \*.cc \*.c \*.h \*.sh \*.c \*.in \*.md prj.spec reconf AUTHORS ChangeLog configure.ac Doxyfile Makefile.am NEWS README.md THANKS "
+#---------------------------------------------------------------------------------
+# change the following 6 variables with respect to this pattern
+# version-number is RELEASE.REVISION.STEP
+
+OLDRELEASE=0    	# defines a release and a library interface
+OLDREVISION=1   	# defines a more important revision of a release
+OLDSTEP=0       	# defines a lowlevel revesion of a release
+      	      	      	# (doesn't concern libraries
+OLDLIBAGE=0   	      	# indicates how many of the elder
+      	      	      	# library-releases offer the same interface
+
+NEWRELEASE=1
+NEWREVISION=0
+NEWSTEP=0
+NEWLIBAGE=0
+
+#---------------------------------------------------------------------------------
+# change the following 6 variables only if you know the revision system of libtool
+OLDLIBTOOLCURRENT="${OLDRELEASE}"
+OLDLIBTOOLREVISION="${OLDREVISION}"
+OLDLIBTOOLAGE="${OLDLIBAGE}"
+
+NEWLIBTOOLCURRENT="${NEWRELEASE}"
+NEWLIBTOOLREVISION="${NEWREVISION}"
+NEWLIBTOOLAGE="${NEWLIBAGE}"
+
+#################################################################################
+# don't change the following lines !
+
+OLDVERSION="${OLDRELEASE}\.${OLDREVISION}\.${OLDSTEP}"
+OLDLIBVERSION="${OLDLIBTOOLCURRENT}\:${OLDLIBTOOLREVISION}\:${OLDLIBTOOLAGE}"
+
+NEWVERSION="${NEWRELEASE}\.${NEWREVISION}\.${NEWSTEP}"
+NEWLIBVERSION="${NEWLIBTOOLCURRENT}\:${NEWLIBTOOLREVISION}\:${NEWLIBTOOLAGE}"
+
+if [ "$1" = "-h" -o "$1" = "--help" ]
+then
+  echo "script for changing revision- and branchnumbers"
+  echo "usage:  change-release [ -h | --help ]"
+  echo "for inserting old and new numbers please edit change-release"
+  exit
+fi
+
+echo $CFP | tr -d '\' | tr ' ' '\n'> xyz.tmp
+cat xyz.tmp | while read mt; do
+  echo "changing files of mimetyp $mt";
+  find . -type f -name "$mt" |
+  while read file; do
+    echo "updating file <$file>"
+    cat $file | sed "/<#$OLDVERSION#>/s/$OLDVERSION/$NEWVERSION/g" > xxx.tmp
+    mv xxx.tmp $file
+  done
+done
+
+find . -type f -name "configure.ac" |
+while read file; do
+  echo "setting $OLDVERSION onto $NEWVERSION in configure.ac"
+  mv $file $file.sav
+  sed -e "/[$OLDVERSION)]/s/$OLDVERSION/$NEWVERSION/" $file.sav > $file
+  rm $file.sav
+done
+
+find . -type f -name "Makefile.am" |
+while read file; do
+  echo "setting $OLDVERSION onto $NEWVERSION in libsection of $file"
+  mv $file $file.sav
+  sed -e "/info $OLDLIBVERSION/s/$OLDLIBVERSION/$NEWLIBVERSION/" $file.sav > $file
+  rm $file.sav
+done
+
+find . -type f -name "Doxyfile" |
+while read file; do
+  echo "setting $OLDVERSION onto $NEWVERSION in Doxyfile"
+  mv $file $file.sav
+  sed -e "/PROJECT_NUMBER = $OLDVERSION/s/$OLDVERSION/$NEWVERSION/" $file.sav > $file
+  rm $file.sav
+done
+
+find . -type f -name "*.html" |
+while read file; do
+  echo "setting projectnumber $OLDVERSION onto $NEWVERSION in html"
+  mv $file $file.sav
+  sed -e "/projectnumber\">$OLDVERSION/s/$OLDVERSION/$NEWVERSION/" $file.sav > $file
+  rm $file.sav
+done
+
+find . -type f -name "*.html" |
+while read file; do
+  echo "setting #$OLDVERSION# onto $NEWVERSION in html"
+  mv $file $file.sav
+  sed -e "/#$OLDVERSION#/s/$OLDVERSION/$NEWVERSION/" $file.sav > $file
+  rm $file.sav
+done
+
+
+find . -type f -name "prj.spec" |
+while read file; do
+  echo "setting $OLDVERSION onto $NEWVERSION in prj.spec"
+  mv $file $file.sav
+  sed -e "/define PRJ_RELEASE $OLDVERSION/s/$OLDVERSION/$NEWVERSION/" $file.sav > $file
+  rm $file.sav
+done
+rm  xyz.tmp
