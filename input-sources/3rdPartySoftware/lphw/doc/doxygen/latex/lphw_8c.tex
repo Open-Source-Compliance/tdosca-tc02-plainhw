@@ -1,0 +1,84 @@
+\hypertarget{lphw_8c}{}\doxysection{lib/lphw.c File Reference}
+\label{lphw_8c}\index{lib/lphw.c@{lib/lphw.c}}
+
+
+all definitions of and for the module Lphw  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}lphw.\+h\char`\"{}}\newline
+Include dependency graph for lphw.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{lphw_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lphw_8c_a1059f04e7254a7f12587416a41e0da82}{D\+E\+F\+I\+N\+I\+N\+G\+\_\+\+L\+P\+HW}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{lphw_8c_a11a285bf3fe1108fe8ec39e040179c4b}{init\+\_\+lphw\+\_\+object}} (void)
+\begin{DoxyCompactList}\small\item\em initialization (could malloc object-\/memory-\/blocks) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lphw_8c_a7c626ba3f14ed4d3abad7d32504e7268}{delete\+\_\+lphw\+\_\+object}} (int obj)
+\begin{DoxyCompactList}\small\item\em delete (could free malloced object-\/memory-\/blocks) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{lphw_8c_ae9e22190b0da915c3854b3867dd5a5b6}\label{lphw_8c_ae9e22190b0da915c3854b3867dd5a5b6}} 
+void \mbox{\hyperlink{lphw_8c_ae9e22190b0da915c3854b3867dd5a5b6}{hello\+\_\+lphw\+\_\+object}} (int obj)
+\begin{DoxyCompactList}\small\item\em saying hello (as a dummy function) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+all definitions of and for the module Lphw 
+
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lphw_8c_a1059f04e7254a7f12587416a41e0da82}\label{lphw_8c_a1059f04e7254a7f12587416a41e0da82}} 
+\index{lphw.c@{lphw.c}!DEFINING\_LPHW@{DEFINING\_LPHW}}
+\index{DEFINING\_LPHW@{DEFINING\_LPHW}!lphw.c@{lphw.c}}
+\doxysubsubsection{\texorpdfstring{DEFINING\_LPHW}{DEFINING\_LPHW}}
+{\footnotesize\ttfamily \#define D\+E\+F\+I\+N\+I\+N\+G\+\_\+\+L\+P\+HW}
+
+if defined external-\/variable-\/declarations in \mbox{\hyperlink{lphw_8h}{lphw.\+h}} are ignored 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lphw_8c_a7c626ba3f14ed4d3abad7d32504e7268}\label{lphw_8c_a7c626ba3f14ed4d3abad7d32504e7268}} 
+\index{lphw.c@{lphw.c}!delete\_lphw\_object@{delete\_lphw\_object}}
+\index{delete\_lphw\_object@{delete\_lphw\_object}!lphw.c@{lphw.c}}
+\doxysubsubsection{\texorpdfstring{delete\_lphw\_object()}{delete\_lphw\_object()}}
+{\footnotesize\ttfamily void delete\+\_\+lphw\+\_\+object (\begin{DoxyParamCaption}\item[{int}]{obj }\end{DoxyParamCaption})}
+
+
+
+delete (could free malloced object-\/memory-\/blocks) 
+
+for deleting of malloced memory (for example)
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & id of the module \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lphw_8c_a11a285bf3fe1108fe8ec39e040179c4b}\label{lphw_8c_a11a285bf3fe1108fe8ec39e040179c4b}} 
+\index{lphw.c@{lphw.c}!init\_lphw\_object@{init\_lphw\_object}}
+\index{init\_lphw\_object@{init\_lphw\_object}!lphw.c@{lphw.c}}
+\doxysubsubsection{\texorpdfstring{init\_lphw\_object()}{init\_lphw\_object()}}
+{\footnotesize\ttfamily int init\+\_\+lphw\+\_\+object (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+initialization (could malloc object-\/memory-\/blocks) 
+
+for initializing where for example memory could be malloced 

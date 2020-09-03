@@ -1,0 +1,54 @@
+#!/bin/sh
+#
+# Copyright (C) 2020 Karsten Reincke, Deutsche Telekom AG <karsten.reincke@telekom.de>
+#  
+# This file is part of of the software-project PHW.
+# 
+# PHW is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+# 
+# PHW is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+#  
+# file <reconf> version <#1.0.0#> of project <PHW>
+
+#!/bin/sh
+ACLOCAL_PATH=" -I /usr/local/gnu/share/aclocal   -I /usr/local/share/aclocal   -I /opt/gnome/share/aclocal   -I/usr/share/aclocal"
+
+DELCONF_FILES=`ls config.*`
+DELETE_FILES=" config.cache    acconfig.h    Makefile    Makefile.in    aclocal.m4    configure    ${DELCONF_FILES}"
+for DF in ${DELETE_FILES};
+do
+  echo "deleting ${DF}"
+  find . -name ${DF} -exec rm \{\} \;
+done
+
+find . -type l -exec rm \{\} \;
+
+echo "- aclocal."
+aclocal
+
+echo "- libtoolize"
+libtoolize
+
+echo "- autoconf."
+autoconf
+
+echo "- autoheader."
+autoheader
+
+echo "- automake."
+automake -a
+
+echo "- doxygen."
+if [ -e doc/doxygen ]; then rm -rf doc/doxygen ; fi
+doxygen Doxyfile
+
+chmod 755 3rdPartySoftware/doinst.sh
+
+exit
