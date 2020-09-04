@@ -1,2 +1,4 @@
-
-COMPONENT,RELEASE,LICENSE,LICENSE-SCOPE,Repository URL
+PHW,1.0.0,GPL-v2,DEFAULT,https://github.com/Open-Source-Compliance/tdosca-tc02-plainhw/tree/master/input-sources
+PHW,1.0.0,BSD-3-Clause,phw_sister_module.c,https://github.com/Open-Source-Compliance/tdosca-tc02-plainhw/tree/master/input-sources
+PHW,1.0.0,MIT,phw_daughter_module.c,https://github.com/Open-Source-Compliance/tdosca-tc02-plainhw/tree/master/input-sources
+lphw,1.0.0,Apache-v2,DEFAULT,https://github.com/Open-Source-Compliance/tdosca-tc02-plainhw/tree/master/input-sources/3rdPartySoftware/lphw

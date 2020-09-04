@@ -39,7 +39,8 @@ int main (int argn, char * argv[])
     lmo=init_lphw_object();
 
     printf("PHW:main says: hello\n");
-/* (c) 2020, Peerceval LeZen
+/*
+ *  Author: Peerceval LeZen
  *
  * simplified message structure
  */
@@ -53,5 +54,10 @@ int main (int argn, char * argv[])
     delete_smo(smo);
     delete_dmo(dmo);
     delete_lphw_object(lmo);
+/*
+ * @Author: Peerceval
+ *
+ * Added return value
+ */
     return 0;
 }
