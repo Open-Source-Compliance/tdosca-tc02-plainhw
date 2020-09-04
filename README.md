@@ -3,7 +3,7 @@
 ## General Context
 The "Test-Driven Open Source Compliance Automation" is an initiative initiated by Deutsche Telekom AG and hosted and driven by the [Open Chain Reference Tooling Work Group](http://oss-compliance-tooling.org/).
 
-![openchain-reference-tooling-work-group-logo.png](logo.png)
+![openchain-reference-tooling-work-group-logo.png](img/logo.png)
 
 The project scope statement and further information of ***TDOSCA*** can be found at [https://github.com/Open-Source-Compliance/tdosca](https://github.com/Open-Source-Compliance/tdosca).
 
@@ -29,7 +29,7 @@ This test case follows the general pattern of a TDOSCA test case:
 The test data of this test case (the program sources in input-sources)
 
 * can be compiled and installed by using the configure, make, make install triple
-* consist of a c programa and a c library as 3rd party component
+* consist of a c program and a c library as 3rd party component
 * all objects functions are initialized and say hello
 * The main project is licensed under the GPL-v2, its sub components under the the MIT license and the BSD-2-Clause.
 * The 3rd party library is licensed under the Apache license
