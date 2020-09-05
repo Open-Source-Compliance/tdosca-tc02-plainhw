@@ -8,6 +8,7 @@
   - [PHW](#PHW) (**GPL-2.0-or-later**)
   - [PHW::PHW::phw_sister_module](#phw_sister_module) (**BSD-3-Clause**)
   - [PHW::PHW::phw_daughter_module](#phw_daughter_module) (**MIT**)
+* [Written Offer](#WO)
 * Multiply used license texts
   - [Apache-2.0](#APACHE20)
   - [GPL-2.0](#GPL20)
@@ -59,12 +60,13 @@ NONE
 * license
   - name: **GPL-2.0-or-later**
   - scope: *DEFAULT*
-  - text: **[see appendix](#GPL20)
+  - text: **[see appendix](#GPL20)**
   - copyright lines:
     * ``Copyright (C) 2020 Karsten Reincke, Deutsche Telekom AG``
     * \\author{kreincke}
     * Author: Peerceval LeZen
     * @Author: Peerceval
+  - source code: **[see 'Written Offer'](WO)**
 
 ### sub component PHW::phw_sister_module <a id="phw_sister_module"></a>
 
@@ -136,8 +138,13 @@ NONE
  * IN THE SOFTWARE.
 
 ```
+## C) 'Written Offer'
 
-## C) multiply used license texts:
+[tbd::DepartmentName] hereby offers, valid for at least three years, to give you or any third party, for a charge no more than the cost of physically performing source distribution, on a medium customarily used for software interchange a complete machine-readable copy of the corresponding source code of the software given to you under any copyleft license (particularly - but not exclusively - under the GNU General Public License (GPL), the GNU Lesser General Public License (LGPL), or the GNU Affero General Public License (AGPL) , the Eclipse Public License (EPL), the Mozilla Public License (MPL) ). To receive such source code please contact [tbd::DepartmentName] as follows:
+
+tbd::DepartmentAddress
+
+## D) multiply used license texts:
 ### Apache-2.0 <a id="APACHE20"></a>
 ```
 Apache License
