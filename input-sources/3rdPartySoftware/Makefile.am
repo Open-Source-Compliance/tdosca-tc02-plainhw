@@ -6,8 +6,6 @@
 #  
 # file <Makefile.am> version <#1.0.0#> of project <LPHW>
 
-EXTRA_DIST = AUTHORS change-release Doxyfile LICENSE  Makefile.am  NOTICE  prepClearRepCommit.sh  prj.spec  README.md  reconf
-
-SUBDIRS = doc lib src
-
+EXTRA_DIST = doinst.sh lphw-1.0.0.tar.gz
 AUTOMAKE_OPTIONS = foreign
+

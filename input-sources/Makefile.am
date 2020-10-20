@@ -15,7 +15,7 @@
 #  
 # file <Makefile.am> version <#1.0.0#> of project <PHW>
 
-EXTRA_DIST = reconf configure Doxyfile change-release prepClearRepCommit prj.spec
-SUBDIRS = doc src
+EXTRA_DIST = AUTHORS ChangeLog change-release configure.ac COPYING Doxyfile Makefile.am prepClearRepCommit prj.spec README.md reconf 
+SUBDIRS = doc src 3rdPartySoftware
 
 AUTOMAKE_OPTIONS = foreign

@@ -38,7 +38,7 @@ int main (int argn, char * argv[])
     dmo=init_dmo();
     lmo=init_lphw_object();
 
-    printf("PHW:main says: hello\n");
+    printf("PHW:main (GPL-v2) says: hello\n");
 /*
  *  Author: Peerceval LeZen
  *

@@ -44,4 +44,4 @@ dnl (7) -------- les autres petis choses
 AC_PATH_PROGS(BASH, bash sh)
 
 dnl (8) -------- determine whole directory-structure
-AC_OUTPUT(Makefile doc/Makefile src/Makefile src/daughter-module/Makefile)
+AC_OUTPUT(Makefile doc/Makefile src/Makefile src/daughter-module/Makefile 3rdPartySoftware/Makefile)

@@ -75,6 +75,6 @@ void delete_lphw_object(int obj) {
 }
 
 void hello_lphw_object(int obj) {
-  printf("lphw:obj %d says: allô\n",obj);
+  printf("lphw (Apache-2.0): obj %d says: allô\n",obj);
 }
 /* &&& (6) define local subfunctions  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */

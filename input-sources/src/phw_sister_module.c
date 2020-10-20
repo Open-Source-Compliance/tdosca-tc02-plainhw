@@ -104,7 +104,7 @@ void speak_smo(int obj, char* msg)
 {
   char* hello="hello";
   if (!(msg)) msg=hello;
-  printf("PHW:smo %d says: %s\n",obj,msg);
+  printf("PHW:smo (BSD-3CL) %d says: %s\n",obj,msg);
 }
 
 /* &&& (6) define local subfunctions  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */

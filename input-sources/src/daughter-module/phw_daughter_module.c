@@ -2,7 +2,7 @@
  * This file is part of of the software-project PHW and distributed under
  * the terms of the MIT License
  *
- * Copyright (C) 2020 K. MIT.c-Reincke 
+ * Copyright (C) 2020 K. MIT.h-Reincke
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to
@@ -103,6 +103,6 @@ void speak_dmo(int obj, char* msg)
 {
   char* hello="hello";
   if (!(msg)) msg=hello;
-  printf("PHW:dmo %d says: %s\n",obj,msg);
+  printf("PHW:dmo (MIT) %d says: %s\n",obj,msg);
 }
 /* &&& (6) define local subfunctions  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */

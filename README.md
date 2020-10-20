@@ -12,7 +12,7 @@ The project scope statement and further information of ***TDOSCA*** can be found
 ### Structure
 
 This test case follows the general pattern of a TDOSCA test case:
-* It has its own repository [https://github.com/Open-Source-Compliance/tdosca-tc01-simplhw](https://github.com/Open-Source-Compliance/tdosca-tc01-simplhw)
+* It has its own repository [https://github.com/Open-Source-Compliance/tdosca-tc02-plainhw](https://github.com/Open-Source-Compliance/tdosca-tc02-plainhw)
 * and contains the following parts:
   - **compliance-traps.md**: *describes the traps / challenges implemented by and in the test case* [used to manually control whether a tested compliance tool really overcomes all difficulties]
   - **input-sources**: *contains all sources to create the distributable (binary package)* [used by the tested tool to create the compliance artifacts]
