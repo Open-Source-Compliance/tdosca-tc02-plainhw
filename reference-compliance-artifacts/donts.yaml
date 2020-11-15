@@ -1,8 +1,0 @@
-# The Dots (Tasks For Establishing The Open Source Compliance of PHW)
-
-PHW::phw_sister_module:
-  - restriction: "don't use the following names of copyright owners and contributors to to endorse or promote products derived from this component"
-    - K. BSD.c-Reincke 
-  
-
-
