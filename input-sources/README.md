@@ -34,6 +34,8 @@ Note: if you install the program at another place than /usr/local or /usr, ensur
 - expand your PATH definition by PATH=WHEREYOUWANT/bin:\$PATH
  
 ## 5. Usage <a id="use"></a>
+call ``phw``
+
 ## 6. Licensing <a id="lic"></a>
  
 This file is part of of the software-project PHW.
