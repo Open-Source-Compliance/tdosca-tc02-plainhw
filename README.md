@@ -40,6 +40,4 @@ The test data of this test case (the program sources in input-sources)
 
 * The software delivered as content of the test case directory ``input-sources`` is licensed under the licenses the test case uses to challenge the compliance tools. Contributions take place under the same licenses.
 
-* Unless otherwise specified, all other files are distributed under the terms of the [CC-BY-4.0 license](https://creativecommons.org/licenses/by/4.0/).
-  - If you share or adapt (one of) the files add the attribution: "File originates from [https://github.com/Open-Source-Compliance/tdosca-tc02-plainhw](https://github.com/Open-Source-Compliance/tdosca-tc02-plainhw) initiated by Deutsche Telekom AG"
-  - If you distribute the complete test case add the attribution: "The test case [https://github.com/Open-Source-Compliance/tdosca-tc02-plainhw](https://github.com/Open-Source-Compliance/tdosca-tc02-plainhw) originates from the TDOSCA project initiated by Deutsche Telekom AG"
+* Unless otherwise specified, all other files are distributed under the terms of the [CC-BY-4.0 license](https://creativecommons.org/licenses/by/4.0/). If you share or adapt this test case or files of it, please add the attribution: "based on [https://github.com/Open-Source-Compliance/tdosca-tc02-plainhw](https://github.com/Open-Source-Compliance/tdosca-tc02-plainhw) initiated by Deutsche Telekom AG"
